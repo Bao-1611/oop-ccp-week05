@@ -15,6 +15,8 @@ int main() {
         }
     } while (n < 2 || n > 20);
 
+    double scores[20];
+
       // Loop de nhap diem cho tung hoc sinh
     for (int i = 1; i <= n; i++) {
         double diem;
