@@ -17,6 +17,8 @@ int main() {
 
     double scores[20];
 
+    cout << "\n--- NHAP DIEM SO HOC SINH ---\n";
+
       // Loop de nhap diem cho tung hoc sinh
     for (int i = 1; i <= n; i++) {
         double diem;
@@ -30,9 +32,15 @@ int main() {
                 cout << "Diem khong hop le! Diem phai tu 0 den 10. Vui long nhap lai.\n\n";
             }
         } while (diem < 0.0 || diem > 10.0);
+
+        // Luu diem vao array (index bat dau tu 0)
+        scores[i - 1] = diem;
     }
 
-    cout << "\nDa nhap xong diem cho tat ca " << n << " hoc sinh!\n";
-
+    cout << "\n--- DANH SACH DIEM DA NHAP ---\n";
+    for (int i = 0; i < n; i++) {
+        cout << "Hoc sinh " << (i + 1) << ": " << scores[i] << " diem\n";
+    }
+    
     return 0;
 }
