@@ -15,7 +15,22 @@ int main() {
         }
     } while (n < 2 || n > 20);
 
-    cout << "So luong hoc sinh hop le da nhap: " << n << endl;
+      // Loop de nhap diem cho tung hoc sinh
+    for (int i = 1; i <= n; i++) {
+        double diem;
+
+        // dung do-while de kiem tra diem hop le
+        do {
+            cout << "Nhap diem cho hoc sinh " << i << " (0 <= diem <= 10): ";
+            cin >> diem;
+
+            if (diem < 0.0 || diem > 10.0) {
+                cout << "Diem khong hop le! Diem phai tu 0 den 10. Vui long nhap lai.\n\n";
+            }
+        } while (diem < 0.0 || diem > 10.0);
+    }
+
+    cout << "\nDa nhap xong diem cho tat ca " << n << " hoc sinh!\n";
 
     return 0;
 }
